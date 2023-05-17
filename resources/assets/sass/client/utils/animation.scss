@@ -1,0 +1,74 @@
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+/* .slide-fade-leave-active до версии 2.1.8 */
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transform: rotateX(90deg);
+  opacity: 0;
+}
+
+.close {
+  transition: .3s;
+  transform: rotate(180deg);
+}
+.open {
+  transition: .3s;
+}
+
+.component-fade-enter-active,
+.component-fade-leave-active {
+  transition: 0.7s ease;
+}
+
+.component-fade-enter,
+.component-fade-leave-to {
+  opacity: 0;
+  transform: scale(0);
+}
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+// попробуем сделать новые анимации
+// ховер-эффекты кстати тоже
+.animation-link-underline {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 2px;
+		background-color: #fff;
+		top: calc(100% + 2px);
+		opacity: 0;
+		left: 0;
+		transition: width 0.3s;
+	}
+	&:hover {
+		&::before {
+			opacity: 1;
+			width: 100%;
+		}
+	}
+}

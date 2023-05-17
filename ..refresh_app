@@ -1,0 +1,5 @@
+#!/bin/bash
+php artisan config:clear
+php artisan cache:clear
+supervisorctl restart all
+sudo nginx -s reload

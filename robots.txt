@@ -1,0 +1,16 @@
+User-agent: YandexBot
+Disallow: *pdf
+Host: https://tamtem.ru
+
+User-agent: Googlebot
+Disallow: *pdf
+Host: https://tamtem.ru
+
+
+User-agent: *
+Disallow: *pdf
+Host: https://tamtem.ru
+
+Allow: /
+
+

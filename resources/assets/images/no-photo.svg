@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="111.034" height="111.034" viewBox="0 0 111.034 111.034">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#2acc5a;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}
+        </style>
+    </defs>
+    <g id="image" transform="translate(.5 .5)">
+        <rect id="Rectangle-path" width="110.034" height="110.034" class="cls-1" rx="2"/>
+        <ellipse id="Oval" cx="9.169" cy="9.17" class="cls-1" rx="9.169" ry="9.17" transform="translate(24.452 24.452)"/>
+        <path id="Shape" d="M97.808 30.565L67.243 0 0 67.243" class="cls-1" transform="translate(12.226 42.791)"/>
+    </g>
+</svg>

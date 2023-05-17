@@ -1,0 +1,180 @@
+// TEMPLATE
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1340px
+);
+
+$container-max-widths: (
+  xs: 0px,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1130px
+) !default;
+
+// Style Guide for new design
+
+// colors
+$color-checkbox-border: #a3a3a3;
+
+$color-btn-hover: #0079b2;
+$color-hamster-cold: #0079b2;
+
+$color-base-dark: #001d85;
+$color-second-dark: #082caf;
+// $color-base-accent: #27d066;
+$color-base-accent: #2fc06e;
+$color-hover-button: #218663;
+
+$color-base-prim: #4ba6de;
+$color-base-light: #ffffff;
+$color-base-attention: #ff564b;
+$color-base-gray-light: #f6f6f6;
+$color-base-gray: #f1f1f1;
+$color-gray-dark: rgba(112, 112, 112, 0.4);
+$color-gray-opacity: #68686852;
+$color-gray-overlay: #b7b7b7;
+$color-text-dark: #010101;
+$color-text-light: #ffffff;
+$color-text-gray: #707070;
+$color-text-bright: #001d85;
+$color-text-bright-faded: #001d8580;
+$color-border-gray: #ececec;
+$color-pale-green: #d4f5de;
+$color-sub-pale: #d2f3ec;
+$color-shadow: rgba(0, 0, 0, 0.16);
+$color-shadow-light: rgba(0, 0, 0, 0.08);
+$color-green-elements: #2acc5a;
+$color-voply-card-header: #f6c748;
+$color-payment-bidcard: #f7c849;
+$black: #000;
+$gray: #c1c1c1;
+$color-button-hide: #cecece;
+$old-primary: #0071bc;
+$success: #85db4b;
+$info: #b2daf5;
+$warning: #f7ac56;
+$danger: #ff564b;
+$light: #cfcccc;
+$body-color: #0b0c0c;
+$color-grey: #ececec;
+$color-viewed-bid: #f4f5f7;
+$color-profile-border-line: #aec5d1;
+$color-company-img-background: #f2f2f2;
+$light-gray: #e6e9ec;
+$color-agent-link: #0a5f87;
+$color-order-input-placeholder: #D1D1D1;
+$color-blue-badge-background: #0078ff; 
+// borders
+$border-radius-standart: 10px;
+$border-radius-small: 6px;
+$border-radius-big: 35px;
+$border-card: solid 1px $color-border-gray;
+$border-btn-accent: solid 1px $color-base-accent;
+$border-btn-green-elements: solid 1px $color-green-elements;
+
+// Transitions
+$transition-base: all 0.2s ease-in-out;
+$transition-fade: opacity 0.15s linear;
+$transition-collapse: height 0.35s ease;
+$transition-card: box-shadow 0.35s ease, transform 0.25s ease;
+
+// Shadows
+$box-shadow-standart: 0 2px 6px 0 rgba(69, 91, 99, 0.18);
+$box-shadow-aside: 0 4px 16px 0 rgba(69, 91, 99, 0.08);
+$box-shadow-fx: rgba(45, 45, 45, 0.05) 0px 2px 2px,
+  rgba(49, 49, 49, 0.05) 0px 4px 4px, rgba(42, 42, 42, 0.05) 0px 8px 8px,
+  rgba(32, 32, 32, 0.05) 0px 16px 16px, rgba(49, 49, 49, 0.05) 0px 32px 32px,
+  rgba(35, 35, 35, 0.05) 0px 64px 64px;
+
+$box-shadow-sm: 0 0.2rem 0.4rem 0 rgba($black, 0.1);
+$box-shadow: 0 0.3rem 0.6rem 0 rgba($black, 0.1);
+$box-shadow-lg: 0 0.4rem 0.8rem 0 rgba($black, 0.1);
+
+// fonts
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap&subset=cyrillic");
+$font-family: "Montserrat", sans-serif;
+$fontsize-base: 14px;
+$fontsize-smaller: 12px;
+$fontsize-phone-header: 26px;
+$fontsize-desk-header: 32px;
+// для свойства font
+// переопределить размер шрифта при необходимости
+$font-light: 300 1rem "Montserrat", sans-serif;
+$font-regular: 400 1rem "Montserrat", sans-serif;
+$font-medium: 500 1rem "Montserrat", sans-serif;
+$font-semibold: 600 1rem "Montserrat", sans-serif;
+$font-bold: 700 1rem "Montserrat", sans-serif;
+
+// just green button
+@mixin big-rounded-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $border-radius-big;
+  font: $font-semibold;
+  color: $color-base-light;
+  font-size: 12px;
+  padding: 0 42px;
+  height: 43px;
+  background-color: $color-base-accent;
+  border: none;
+	text-align: center;
+  text-transform: uppercase;
+	text-decoration: none;
+	&:hover,
+	&:visited,
+	&:active {
+		color: $color-base-light;
+	}
+}
+@mixin contentbox {
+	border: 1px solid $color-border-gray;
+	background-color: $color-base-gray-light;
+	border-radius: 10px;
+	padding: 25px 23px;
+}
+@mixin hamster-field {
+	background: $color-base-light;
+	border-radius: 4px;
+	border: 1px solid $color-border-gray;
+	padding: 0 12px;
+	min-height: 43px;
+	display: flex;
+	align-items: center;
+	@media(max-width: 768px) {
+		min-height: 40px;
+		font-size: 14px;
+	}
+	@media(max-width: 425px) {
+		min-height: 36px;
+		font-size: 13px;
+	}
+}
+// old variables
+$height-header: 5.2rem;
+$height-header-sm: 9rem;
+$height-footer: 19vh;
+$height-footer-md: 29vh;
+$height-footer-sm: 29vh;
+$height-footer-xs: 29vh;
+$header-main-space: 2rem;
+$header-main-space-sm: 1rem;
+$height-search-filter: 4rem;
+$height-gift-height: 4rem;
+$height-gift-height-sm: 5.3rem;
+
+$main-padding-top: ($height-header + $header-main-space);
+$main-padding-top-sm: ($height-header-sm + $header-main-space-sm);
+$main-padding-top-filter: ($main-padding-top + $height-search-filter);
+$main-padding-top-filter-sm: $main-padding-top-sm;
+
+$header-top-popover: ($height-header - 1rem);
+$header-top-popover-sm: ($height-header-sm - 1rem);
+
+$voply-width: 32rem;
+$grid-gutter-width: 1.4rem;
